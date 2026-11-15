@@ -53,3 +53,9 @@ Same Flask task, DeepSeek Max. Every run passed 494/494. Exact upstream restore 
 | Caveman + ADHD | 113,503 | 1,501 | 28.9s | 2/3 |
 
 Core and Caveman-only single runs also passed and fully restored, but were slower (30.36s and 29.23s). Caveman + ADHD kept for better full-fix rate; ADHD-only was cheaper but less reliable. Results are task-specific, not universal proof.
+
+## Pi comparison and durable status
+
+Same Flask regressions, DeepSeek Max, Caveman+ADHD. Pi fully restored source and passed 494/494: 6,688 input, 935 output, 27.54s. Goose Caveman+ADHD three-run average: 113,503 input, 1,501 output, 28.9s, 2/3 full fixes. Pi won input tokens decisively on this run.
+
+Pi-durable 1.5.2 crash harness attempted with SQLite and forced process exit. Recovery did not complete: custom model wiring returned `Unknown provider: undefined`. Durable recovery is not verified; article durability claims remain author-reported.
