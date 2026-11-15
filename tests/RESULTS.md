@@ -59,3 +59,18 @@ Core and Caveman-only single runs also passed and fully restored, but were slowe
 Same Flask regressions, DeepSeek Max, Caveman+ADHD. Pi fully restored source and passed 494/494: 6,688 input, 935 output, 27.54s. Goose Caveman+ADHD three-run average: 113,503 input, 1,501 output, 28.9s, 2/3 full fixes. Pi won input tokens decisively on this run.
 
 Pi-durable 1.5.2 crash harness attempted with SQLite and forced process exit. Recovery did not complete: custom model wiring returned `Unknown provider: undefined`. Durable recovery is not verified; article durability claims remain author-reported.
+
+## Multi-repo Goose vs Pi
+
+Same DeepSeek Max and Caveman+ADHD. Clean isolated Pi config. All runs restored source exactly and passed full checks.
+
+| Task | Harness | Input | Output | Time |
+|---|---|---:|---:|---:|
+| Jinja, 911 tests | Goose | 112,047 | 1,742 | 29.51s |
+| Jinja, 911 tests | Pi | 7,354 | 1,081 | 33.67s |
+| path-to-regexp, npm test/lint/build/size | Goose | 343,431 | 2,190 | 64.48s |
+| path-to-regexp, npm test/lint/build/size | Pi | 16,003 | 537 | 31.75s |
+
+Pi used 93.4% fewer input tokens on Jinja and 95.3% fewer on JavaScript. Goose was 12.4% faster on Jinja; Pi was 50.8% faster on JavaScript. Results are single runs per task.
+
+Pi-durable recovery remains unverified after stopping a configuration debug spiral (`Provider is not configured: allmodels`). No durability claim is made.
