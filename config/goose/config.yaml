@@ -1,0 +1,41 @@
+extensions:
+  developer:
+    enabled: true
+    type: builtin
+    name: developer
+    bundled: true
+  tom:
+    enabled: true
+    type: platform
+    name: tom
+    bundled: true
+  code_execution:
+    enabled: false
+    type: platform
+    name: code_execution
+    bundled: true
+  skills:
+    enabled: false
+    type: platform
+    name: skills
+    bundled: true
+  extensionmanager:
+    enabled: false
+    type: platform
+    name: extensionmanager
+    bundled: true
+providers:
+  402router:
+    enabled: true
+    model: k3.1-pro
+    configured: true
+  allmodels_fast:
+    enabled: true
+    model: deepseek/deepseek-v4.1-flash-abliterated
+    configured: true
+active_provider: 402router
+GOOSE_TELEMETRY_ENABLED: false
+GOOSE_THINKING_EFFORT: max
+GOOSE_MAX_TOKENS: 126976
+GOOSE_MAX_TURNS: 25
+GOOSE_MOIM_MESSAGE_FILE: ~/.config/goose/adhd.md

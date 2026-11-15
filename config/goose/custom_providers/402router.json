@@ -1,0 +1,12 @@
+{
+  "name": "402router",
+  "engine": "openai",
+  "display_name": "402router",
+  "api_key_env": "ROUTER_INTERNAL_KEY",
+  "base_url": "https://router.paymentrequired.com/v1/internal/chat/completions",
+  "models": [{"name":"k3.1-pro","context_limit":1048576,"reasoning":true,"request_params":{"thinking_effort":"max"}}],
+  "dynamic_models": false,
+  "skip_canonical_filtering": true,
+  "supports_streaming": true,
+  "requires_auth": true
+}

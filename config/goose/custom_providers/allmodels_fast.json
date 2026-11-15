@@ -1,0 +1,17 @@
+{
+  "name": "allmodels_fast",
+  "engine": "openai",
+  "display_name": "AllModels Fast",
+  "api_key_env": "ALLMODELS_API_KEY",
+  "base_url": "https://api.allmodels.io/oai/chat/completions",
+  "models": [{
+    "name": "deepseek/deepseek-v4.1-flash-abliterated",
+    "context_limit": 1048576,
+    "reasoning": true,
+    "request_params": {"provider":{"order":["lyber","hopper","abliteration"],"allow_fallbacks":true}}
+  }],
+  "dynamic_models": false,
+  "skip_canonical_filtering": true,
+  "supports_streaming": true,
+  "requires_auth": true
+}
