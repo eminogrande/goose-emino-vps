@@ -74,3 +74,7 @@ Same DeepSeek Max and Caveman+ADHD. Clean isolated Pi config. All runs restored 
 Pi used 93.4% fewer input tokens on Jinja and 95.3% fewer on JavaScript. Goose was 12.4% faster on Jinja; Pi was 50.8% faster on JavaScript. Results are single runs per task.
 
 Pi-durable recovery remains unverified after stopping a configuration debug spiral (`Provider is not configured: allmodels`). No durability claim is made.
+
+## Pi-durable recovery passed
+
+Pi-durable 1.5.2 + SQLite + DeepSeek Max. First process forcibly exited with code 42 during the model request. A new process reopened the same SQLite storage and completed requestId `crash-canary-1` with status `done`. Transcript contained exactly `DURABLE_RECOVERED` at max reasoning. Earlier setup errors were fixed; recovery is now verified locally.
