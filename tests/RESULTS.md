@@ -31,3 +31,14 @@ Real Flask repo; JSON and session regressions across two files; DeepSeek Max. Bo
 | Full Caveman proxy + recovery MCP | 175,224 | 2,765 | 37.00s | 0% |
 
 Plain Goose used 37.6% fewer input tokens and was 38.0% faster. Temporary integration removed; minimal config restored.
+
+## Minimal system-prompt experiment
+
+Same Flask multi-file regression and DeepSeek Max. Both restored source exactly to upstream and passed 494/494. Kimi review therefore had no source diff to reject.
+
+| Prompt | Input | Output | Wall time |
+|---|---:|---:|---:|
+| Default | 109,362 | 1,897 | 22.95s |
+| Minimal custom | 131,994 | 1,216 | 30.50s |
+
+Minimal prompt lost: 20.7% more input and 32.9% slower. Default prompt restored.
