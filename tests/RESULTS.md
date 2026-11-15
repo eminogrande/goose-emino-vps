@@ -20,3 +20,14 @@ Real itsdangerous repo; injected digest bug; 297 tests; DeepSeek Max. Both fixed
 | Full Caveman proxy + recovery MCP | 120,954 | 1,395 | 18.61s | 0% |
 
 Full Caveman was slower and used more tokens on this task. Temporary integration removed; minimal config restored.
+
+## Flask multi-file regression
+
+Real Flask repo; JSON and session regressions across two files; DeepSeek Max. Both passed 494/494.
+
+| Setup | Input | Output | Wall time | Caveman reduction |
+|---|---:|---:|---:|---:|
+| Plain minimal Goose | 109,362 | 1,897 | 22.95s | — |
+| Full Caveman proxy + recovery MCP | 175,224 | 2,765 | 37.00s | 0% |
+
+Plain Goose used 37.6% fewer input tokens and was 38.0% faster. Temporary integration removed; minimal config restored.
