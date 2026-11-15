@@ -42,3 +42,14 @@ Same Flask multi-file regression and DeepSeek Max. Both restored source exactly 
 | Minimal custom | 131,994 | 1,216 | 30.50s |
 
 Minimal prompt lost: 20.7% more input and 32.9% slower. Default prompt restored.
+
+## Prompt-rule A/B: three repeated runs
+
+Same Flask task, DeepSeek Max. Every run passed 494/494. Exact upstream restore also checked because tests missed two seeded regressions.
+
+| Rules | Avg input | Avg output | Avg time | Full fixes |
+|---|---:|---:|---:|---:|
+| ADHD only | 98,865 | 1,367 | 25.0s | 1/3 |
+| Caveman + ADHD | 113,503 | 1,501 | 28.9s | 2/3 |
+
+Core and Caveman-only single runs also passed and fully restored, but were slower (30.36s and 29.23s). Caveman + ADHD kept for better full-fix rate; ADHD-only was cheaper but less reliable. Results are task-specific, not universal proof.
