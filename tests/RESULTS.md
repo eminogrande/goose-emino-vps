@@ -82,3 +82,14 @@ Pi-durable 1.5.2 + SQLite + DeepSeek Max. First process forcibly exited with cod
 ## Local durable coding agent
 
 Minimal Pi-durable CLI prototype used SQLite, CodingTools, NodeExecutionEnv and DeepSeek Max. Canary returned `LOCAL_DURABLE_OK`. On Flask regressions it restored all source exactly and passed 494/494 in 103.63s. This proves local coding and recovery; it is not yet the fast production configuration.
+
+## Clean Pi vs user's full Pi
+
+Same installed Pi 1.5.0 binary, Flask task, DeepSeek Max. Full Pi used existing extensions, skills, MCP and context customizations.
+
+| Pi config | Input | Output | Time | Quality |
+|---|---:|---:|---:|---|
+| Clean | 6,688 | 935 | 27.54s | Exact restore; 494/494 |
+| Full user config | 21,826 | 1,553 | 38.84s | 494/494 but missed two regressions and changed an unrelated property |
+
+Clean config won this run. Full config was restored after the benchmark.
