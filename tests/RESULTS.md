@@ -78,3 +78,7 @@ Pi-durable recovery remains unverified after stopping a configuration debug spir
 ## Pi-durable recovery passed
 
 Pi-durable 1.5.2 + SQLite + DeepSeek Max. First process forcibly exited with code 42 during the model request. A new process reopened the same SQLite storage and completed requestId `crash-canary-1` with status `done`. Transcript contained exactly `DURABLE_RECOVERED` at max reasoning. Earlier setup errors were fixed; recovery is now verified locally.
+
+## Local durable coding agent
+
+Minimal Pi-durable CLI prototype used SQLite, CodingTools, NodeExecutionEnv and DeepSeek Max. Canary returned `LOCAL_DURABLE_OK`. On Flask regressions it restored all source exactly and passed 494/494 in 103.63s. This proves local coding and recovery; it is not yet the fast production configuration.
